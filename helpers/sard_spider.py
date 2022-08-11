@@ -109,8 +109,7 @@ def download_sard_testcase(merge_args):
         logging.info(f'{url}: fail {str(e)}')
 
 
-def get_testcases(root='/home/wubolun/data/codevul/DeepWukong/Dataset',
-                  save_dir='/home/wubolun/data/codevul/SARD'):
+def get_testcases(root, save_dir):
     test_cases = set()
     
     # * get more good samples
@@ -149,19 +148,3 @@ def get_testcases(root='/home/wubolun/data/codevul/DeepWukong/Dataset',
     with open(os.path.join(save_dir, 'test_case.json'), 'w') as f:
         json.dump(test_cases, f, indent=1)
 
-
-if __name__ == '__main__':
-    
-    # get_testcases()
-    
-    with open('/home/wubolun/data/codevul/SARD/test_case.json', 'r') as f:
-        data = json.load(f)
-
-    root = '/home/wubolun/data/codevul/SARD/c'
-    merge_args = []
-
-    for testcase_id in data:
-        merge_args.append([root, testcase_id])
-
-    process_map(download_sard_testcase, merge_args, max_workers=8)
-    

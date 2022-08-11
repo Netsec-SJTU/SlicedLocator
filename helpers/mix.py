@@ -63,14 +63,15 @@ def generate_mix_sdg(label_path, num_proc=8):
 
 
 if __name__ == '__main__':
-    pass
-    # generate_mix_label(sard_c_dir='/home/wubolun/data/codevul/SARD/c',
-    #                    cve_db_path='/home/wubolun/data/codevul/CVEfixes_v1.0.0/Data/CVEfixes.db',
-    #                    save_dir='/home/wubolun/data/codevul/sard+cve')
     
-    # generate_annotation(label_path='/home/wubolun/data/codevul/sard+cve/mix_label.json')
+    generate_mix_label(sard_c_dir='/home/wubolun/data/codevul/SARD/c',
+                       cve_db_path='/home/wubolun/data/codevul/CVEfixes_v1.0.0/Data/CVEfixes.db',
+                       save_dir='/home/wubolun/data/codevul/sard+cve')
     
-    # generate_mix_sdg(
-    #     label_path='/home/wubolun/data/codevul/sard+cve/mix_label.json',
-    #     num_proc=8
-    # )
+    generate_annotation(label_path='/home/wubolun/data/codevul/sard+cve/mix_label.json')
+    
+    generate_mix_sdg(
+        label_path='/home/wubolun/data/codevul/sard+cve/mix_label.json',
+        num_proc=8
+    )
+    
