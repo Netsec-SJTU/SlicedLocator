@@ -1,5 +1,5 @@
 # SlicedLocator
-Code vulnerability locator based on sliced dependency graph (SDG).
+Source code of our paper - SlicedLocator: Code Vulnerability Locator Based on Sliced Dependence Graph, which has been accepted by Computers & Security.
 
 # Requirements
 ```
@@ -18,3 +18,4 @@ scikit-learn              1.1.1
 # Contact Info
 Bolun Wu
 [bowenwu@sjtu.edu.cn](mailto:bowenwu@sjtu.edu.cn)
+
